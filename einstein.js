@@ -51,4 +51,11 @@ function form(){
 		}
 		document.getElementById("formValues").append(row);
 	}
+	document.getElementById("clues").style.display = "";
+}
+
+function add(){
+	var row = document.getElementsByClassName("row")[0];
+	var clone = row.cloneNode(true);
+	document.getElementById("clues").children[0].append(clone);
 }

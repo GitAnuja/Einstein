@@ -8,6 +8,13 @@
 <button onclick="form()" id="form" style="display : none;">FORM</button>
 <br>
 <table id="formValues" border="2"></table>
+<br>
+<table id="clues" style="display : none;" border="1">
+	<tr class="row">
+		<td><input type="checkbox"></td>
+		<td><input></td><td><input type="button" value="add" onclick="add()"></td>
+	</tr>
+</table>
 <script>
 	window.onload = function(){
 		var r = 4, c = 4;
@@ -23,5 +30,6 @@
 			}
 		}
 		form();
+		add();
 	}
 </script>

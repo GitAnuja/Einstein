@@ -15,6 +15,9 @@ function form(obj){
 					value = value ? value : "";
 					cell1.innerText = value;
 					row1.append(cell1);
+					cell1.onclick = function(){
+						cellClick(this);
+					}
 				}
 				table1.append(row1);
 			}
@@ -39,5 +42,14 @@ function formRules(obj){
 		var td2 = document.createElement("td");
 		td2.innerText = obj.clues[i];
 		row.append(td2);
+	}
+}
+
+function cellClick(target){
+	if(target.style["text-decoration"] == "line-through"){
+		target.style["text-decoration"] = "";
+	}
+	else{
+		target.style["text-decoration"] = "line-through";		
 	}
 }

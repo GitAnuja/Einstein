@@ -1,35 +1,6 @@
-<input id="r">
-<input id="c">
-<script src="einstein.js"></script>
-<br>
-<button onclick="getValues()">Get Values</button>
-<table id="values" border="1"></table>
-<br>
-<button onclick="form()" id="form" style="display : none;">FORM</button>
-<br>
 <table id="formValues" border="2"></table>
 <br>
-<table id="clues" style="display : none;" border="1">
-	<tr class="row">
-		<td><input type="checkbox"></td>
-		<td><input></td><td><input type="button" value="add" onclick="add()"></td>
-	</tr>
-</table>
-<script>
-	window.onload = function(){
-		var r = 4, c = 4;
-		document.getElementById("r").value = r;
-		document.getElementById("c").value = c;
-		getValues();
-		var table = document.getElementById("values").children;
-		var arr = [["milk", "coke", "wine", "whiskey"], ["rugby", "volleyball", "ballet", "basketball"], ["graduation", "feathered", "cowboy", "baseball"], ["frog", "elephant", "cat", "dog"]];
-		for(var i=0; i<r; i++){
-			var tr = table[i].children;
-			for(var j=0; j<c; j++){
-				tr[j].children[0].value = arr[i][j];
-			}
-		}
-		form();
-		add();
-	}
-</script>
+<br>
+<table id="clues" border="1"></table>
+<script src="einstein.js"></script>
+<script src="onload.js"></script>
